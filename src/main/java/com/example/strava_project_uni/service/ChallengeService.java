@@ -1,7 +1,8 @@
 package com.example.strava_project_uni.service;
 
+import com.example.strava_project_uni.dao.ChallengeRepository;
 import com.example.strava_project_uni.entity.Challenge;
-import com.example.strava_project_uni.repository.ChallengeRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
@@ -24,4 +25,8 @@ public class ChallengeService {
     public List<Challenge> getActiveChallenges() {
         return challengeRepository.findByActiveTrue();
     }
+
+	public List<Challenge> getChallengesCreatedById(Long createdById) {
+		return challengeRepository.findByCreatedById(createdById);
+	}
 }

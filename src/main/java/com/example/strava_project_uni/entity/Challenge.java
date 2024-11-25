@@ -24,7 +24,19 @@ public class Challenge {
     @ManyToOne
     @JoinColumn(name = "created_by")
     private User createdBy; // Link to the User entity
-
+    
+    public Challenge() {
+	}
+    
+    public Challenge(String name, String description, LocalDateTime startDate, LocalDateTime endDate, boolean active, User createdBy) {
+        this.name = name;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.active = active;
+        this.createdBy = createdBy;    	        
+    }
+    
     // Getters and setters
     public Long getId() {
         return id;

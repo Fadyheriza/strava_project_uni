@@ -1,8 +1,9 @@
 package com.example.strava_project_uni.controller;
 
 
+import com.example.strava_project_uni.dao.UserRepository;
 import com.example.strava_project_uni.entity.User;
-import com.example.strava_project_uni.repository.UserRepository;
+
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

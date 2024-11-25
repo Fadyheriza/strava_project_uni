@@ -11,15 +11,32 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
+    @Column(nullable = false, unique = true)
     private String email;
 
+    @Column(nullable = false)
+    private String password;
+    
+    @Column(nullable = false, unique = false)
     private String name;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<TrainingSession> trainingSessions;
 
-    // Getters and Setters
+	public User() {
+	}
+	
+    public User(String email, String password, String name) {
+		this.email = email;
+		this.password = password;
+		this.name = name;
+	}
+
+	public boolean checkPassword(String password) {
+        return this.password.equals(password);
+	}
+	// Getters and Setters
     public Long getId() {
         return id;
     }
