@@ -1,8 +1,8 @@
 package com.example.strava_project_uni.service;
 
 
-import com.example.strava.entity.User;
-import com.example.strava.repository.UserRepository;
+import com.example.strava_project_uni.entity.User;
+import com.example.strava_project_uni.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.example.strava_project_uni.controller;
 
-import com.example.strava.entity.TrainingSession;
-import com.example.strava.service.TrainingSessionService;
+import com.example.strava_project_uni.entity.TrainingSession;
+import com.example.strava_project_uni.service.TrainingSessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
