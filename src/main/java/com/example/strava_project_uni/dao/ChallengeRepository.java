@@ -1,4 +1,4 @@
-package com.example.strava_project_uni.repository;
+package com.example.strava_project_uni.dao;
 
 import com.example.strava_project_uni.entity.Challenge;
 import org.springframework.data.jpa.repository.JpaRepository;

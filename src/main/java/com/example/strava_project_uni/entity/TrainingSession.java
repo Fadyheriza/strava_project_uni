@@ -10,18 +10,33 @@ public class TrainingSession {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
+    @Column(nullable = false)
     private String title;
-
+    
+    @Column(nullable = false)
     private String description;
 
+    @Column(nullable = false)
     private LocalDateTime dateTime;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user; // Assuming you have a User entity linked to OAuth2
 
-    // Getters and setters
+    // Constructors
+	public TrainingSession() {
+	}
+    
+    public TrainingSession(Long id, String title, String description, LocalDateTime dateTime, User user) {
+		this.id = id;
+		this.title = title;
+		this.description = description;
+		this.dateTime = dateTime;
+		this.user = user;
+	}
+
+	// Getters and setters
 
     public Long getId() {
         return id;
